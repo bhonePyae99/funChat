@@ -1,13 +1,42 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.chat-room {
+  height: 500px;
+}
+
+.send-input {
+  position: absolute;
+  bottom: 2px;
+  /* transform: translateX(-2%); */
+}
+
+.message-body {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.message-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  height: 44px;
+}
+
+.message img {
+  height: 35px;
+}
+
+.message-body::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 375px) {
+  .message-body {
+    height: 60%;
+  }
 }
